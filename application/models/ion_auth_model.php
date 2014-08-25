@@ -893,7 +893,7 @@ class Ion_auth_model extends CI_Model
 		// IP Address
 		$ip_address = $this->_prepare_ip($this->input->ip_address());
 		$salt       = $this->store_salt ? $this->salt() : FALSE;
-		$password   = $this->hash_password($password, $salt);
+//		$password   = $this->hash_password($password, $salt);
 
 		// Users table.
 		$data = array(
@@ -980,9 +980,9 @@ class Ion_auth_model extends CI_Model
 		{
 			$user = $query->row();
 
-			$password = $this->hash_password_db($user->id, $password);
+			$validatepassword = ($user->password == $this->soft_encrypt_password($password));
 
-			if ($password === TRUE)
+			if ($validatepassword === TRUE)
 			{
 				if ($user->active == 0)
 				{
@@ -2163,4 +2163,12 @@ class Ion_auth_model extends CI_Model
 		//just return the string IP address now for better compatibility
 		return $ip_address;
 	}
+    function soft_encrypt_password($password) {
+        $hex='';
+        for ($i=0; $i < strlen($password); $i++)
+        {
+            $hex += dechex(ord($password[$i]));
+        }
+        return $hex;
+    }
 }

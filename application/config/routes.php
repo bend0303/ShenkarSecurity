@@ -39,6 +39,9 @@
 */
 
 $route['default_controller'] = "auth";
+$route['posts'] = "posts";
+$route['steal_cookie'] = "stealcookie";
+$route['posts/(:any)'] = "posts/$1";
 $route['404_override'] = '';
 
 

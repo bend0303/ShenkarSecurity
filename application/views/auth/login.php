@@ -1,28 +1,47 @@
-<h1><?php echo lang('login_heading');?></h1>
-<p><?php echo lang('login_subheading');?></p>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<div style="position: fixed; top:0; width: 100%; height: 60px; background-color: lightgray;">
 
-<div id="infoMessage"><?php echo $message;?></div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div style="text-align: left; margin-left: 120px; ">
+                <H4>Shenkar's Security Engineer - Final project<small style="margin-left:8px;">Submitted by Or Guz & Ben Diamant</small></H4>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div style="text-align: right; margin-right: 120px; margin-top:20px;">
+                <!-- Button trigger modal -->
 
-<?php echo form_open("auth/login");?>
+                <a class="btn btn-primary btn-sm" href="create_user">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    </div>
 
-  <p>
-    <?php echo lang('login_identity_label', 'identity');?>
-    <?php echo form_input($identity);?>
-  </p>
+</div>
 
-  <p>
-    <?php echo lang('login_password_label', 'password');?>
-    <?php echo form_input($password);?>
-  </p>
+<div style="background-color: rgb(240, 240, 240);margin-top: 100px;" class="container">
+    <h1><?php echo lang('login_heading'); ?></h1>
+    <p><?php echo lang('login_subheading'); ?></p>
 
-  <p>
-    <?php echo lang('login_remember_label', 'remember');?>
-    <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"');?>
-  </p>
+    <?php echo form_open("auth/login"); ?>
+    <div class="form-group">
+            <label for="identity">Email/Username:</label>
+            <input type="text" class="form-control" name="identity" value="" id="identity"/></div>
+    <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password"  class="form-control" name="password" value="" id="password"/></div>
+    <div class="form-group">
+            <label for="remember">Remember Me:</label>
+            <input type="checkbox" name="remember" value="1" id="remember"/></div>
+    <div class="form-group">
+            <input type="submit" name="submit" class="btn btn-primary btn-md" value="Login"/>
+        </div>
+    <?php echo form_close(); ?>
 
-
-  <p><?php echo form_submit('submit', lang('login_submit_btn'));?></p>
-
-<?php echo form_close();?>
-
-<p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
+    <div id="infoMessage"><?php echo $message; ?></div>
+    <p><?php echo anchor('', lang('index_create_user_link')) ?></p>
+</div>
