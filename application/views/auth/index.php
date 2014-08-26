@@ -42,7 +42,7 @@
     <?php foreach ($posts as $post): ?>
         <div style="margin-bottom: 25px; background-color: rgb(243, 243, 243); padding: 2px;" class="postWrapper">
 
-            <h1 style="margin-left: 10px;"><?php echo $post->content; ?></h1>
+            <h3 style="margin-left: 10px;"><?php echo $post->content; ?></h3>
             <h4 style="margin-left: 5px;"><?php echo $post->subject; ?>
                 <small style="margin-left: 8px;">Added by <?php echo ucwords($post->first_name) . ' ' . ucwords($post->last_name); ?>
                     on <?php echo $post->timestamp; ?></small>
