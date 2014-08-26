@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "auth";
+$route['auth/(:any)'] = "auth/$1";
 $route['posts'] = "posts";
 $route['steal_cookie'] = "stealcookie";
 $route['posts/(:any)'] = "posts/$1";
