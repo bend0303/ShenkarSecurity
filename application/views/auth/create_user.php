@@ -24,7 +24,7 @@
 <div style="background-color: rgb(240, 240, 240);margin-top: 100px;" class="container">
     <h1><?php echo lang('create_user_heading'); ?></h1>
     <p><?php echo lang('create_user_subheading'); ?></p>
-    <div id="infoMessage"><?php echo $message;?></div>
+    <div style="color: darkgreen" id="infoMessage"><?php echo $message;?></div>
 
     <?php echo form_open("auth/create_user"); ?>
     <div class="form-group">

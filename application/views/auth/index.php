@@ -16,13 +16,13 @@
 <div style="position: fixed; top:0; width: 100%; height: 60px; background-color: lightgray;">
 
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-8">
             <div style="text-align: left; margin-left: 120px; ">
                 <H4>Shenkar's Security Engineer - Final project<small style="margin-left:8px;">Submitted by Or Guz & Ben Diamant</small></H4>
                 Hello <?php echo ucwords($currentuser['username']);?>!
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
             <div style="text-align: right; margin-right: 120px; margin-top:20px;">
                 <!-- Button trigger modal -->
                 <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">

@@ -8,7 +8,7 @@ $(document).ready(function(){
         content = $('#postContent').val();
         uid = $('#uid').val();
         $.post(
-            "http://localhost/index.php/posts/insert_post",
+            "http://10.0.180.159/index.php/posts/insert_post",
             {
                 subject: subject,
                 content: content,
