@@ -21,7 +21,7 @@ class Posts extends CI_Controller {
         $subject = $_POST['subject'];
         $content = $_POST['content'];
         $uid = $_POST['uid'];
-        $retval = $this->post_model->insertPost($subject, $content, $uid);
+        $retval = $this->posts_model->insertPost($subject, $content, $uid);
         echo json_encode($retval);
     }
 }

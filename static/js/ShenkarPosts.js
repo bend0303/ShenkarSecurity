@@ -8,15 +8,15 @@ $(document).ready(function(){
         content = $('#postContent').val();
         uid = $('#uid').val();
         $.post(
-            "http://localhost:8080/index.php/posts/insert_post",
+            "http://localhost/index.php/posts/insert_post",
             {
                 subject: subject,
                 content: content,
                 uid: uid
             }
         ).done(function(data) {
-               alert(data);
-            });
+            location.reload();
+                });
         $('#myModal').modal('hide');
     }
 
