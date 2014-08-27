@@ -13,8 +13,8 @@ class Posts_model extends CI_Model {
 
     function getAllPosts() {
         $query = $this->db->query('SELECT shenkardb.posts.*, shenkardb.users.email, shenkardb.users.first_name, shenkardb.users.last_name FROM shenkardb.posts
-left join shenkardb.users
- on shenkardb.posts.user_id = shenkardb.users.id;');
+            left join shenkardb.users
+             on shenkardb.posts.user_id = shenkardb.users.id;');
         return $query->result();
     }
 

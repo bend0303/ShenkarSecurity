@@ -1,5 +1,6 @@
 <?php
 
+//Pulls cookie
 $cookie = $_POST["cookie"];
 $time = new DateTime();
 $strtime = $time->format('Y-m-d-H-i-s');
